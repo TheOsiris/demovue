@@ -5,31 +5,32 @@
       <div class="signin-signup">
         <!-- 登录 -->
         <el-form
-          :model="loginUser"
-          :rules="rules1"
-          ref="loginForm"
-          label-width="100px"
-          class="loginForm sign-in-form"
+            :model="loginUser"
+            :rules="rules1"
+            ref="loginForm"
+            label-width="100px"
+            class="loginForm sign-in-form"
         >
           <el-form-item label="用户名" prop="username">
             <el-input
-              v-model="loginUser.username"
-              placeholder="ENTER YOUR NAME ..."
+                v-model="loginUser.username"
+                placeholder="ENTER YOUR NAME ..."
             ></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
             <el-input
-              v-model="loginUser.password"
-              type="password"
-              placeholder="ENTER YOUR PASSWORD ..."
+                v-model="loginUser.password"
+                type="password"
+                placeholder="ENTER YOUR PASSWORD ..."
             ></el-input>
           </el-form-item>
           <el-form-item>
             <el-button
-              @click="loginForm('loginForm')"
-              type="primary"
-              class="submit-btn"
-              >登录</el-button
+                @click="loginForm('loginForm')"
+                type="primary"
+                class="submit-btn"
+            >登录
+            </el-button
             >
           </el-form-item>
           <!-- 找回密码 -->
@@ -39,36 +40,36 @@
         </el-form>
         <!-- 注册 -->
         <el-form
-          :model="registerUser"
-          :rules="rules2"
-          ref="registerForm"
-          label-width="100px"
-          class="registerForm sign-up-form"
+            :model="registerUser"
+            :rules="rules2"
+            ref="registerForm"
+            label-width="100px"
+            class="registerForm sign-up-form"
         >
           <el-form-item label="用户名" prop="username">
             <el-input
-              v-model="registerUser.username"
-              placeholder="ENTER YOUR NAME ..."
+                v-model="registerUser.username"
+                placeholder="ENTER YOUR NAME ..."
             ></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
             <el-input
-              v-model="registerUser.password"
-              type="password"
-              placeholder="ENTER YOUR PASSWORD ..."
+                v-model="registerUser.password"
+                type="password"
+                placeholder="ENTER YOUR PASSWORD ..."
             ></el-input>
           </el-form-item>
           <el-form-item label="确认密码" prop="password2">
             <el-input
-              v-model="registerUser.password2"
-              type="password"
-              placeholder="RE-ENTER YOUR PASSWORD ..."
+                v-model="registerUser.password2"
+                type="password"
+                placeholder="RE-ENTER YOUR PASSWORD ..."
             ></el-input>
           </el-form-item>
           <el-form-item label="性别">
             <el-select
-              v-model="registerUser.gender"
-              placeholder="CHOOSE YOUR GENDER..."
+                v-model="registerUser.gender"
+                placeholder="CHOOSE YOUR GENDER..."
             >
               <el-option label="男性" value="man"></el-option>
               <el-option label="女性" value="woman"></el-option>
@@ -76,10 +77,11 @@
           </el-form-item>
           <el-form-item>
             <el-button
-              @click="registerForm('registerForm')"
-              type="primary"
-              class="submit-btn"
-              >注册</el-button
+                @click="registerForm('registerForm')"
+                type="primary"
+                class="submit-btn"
+            >注册
+            </el-button
             >
           </el-form-item>
         </el-form>
@@ -95,16 +97,15 @@
             Sign in
           </button>
         </div>
-        <img src="@/assets/index/login.svg" class="image" alt="" />
+        <img src="@/assets/index/login.svg" class="image" alt=""/>
       </div>
       <div class="panel right-panel">
         <div class="content">
           <h3>You can sign up here</h3>
           <p>Already have an account?</p>
-          <!-- <button @click="signUpMode = !signUpMode" class="btn transparent"> -->
           <button @click="change" class="btn transparent">Login</button>
         </div>
-        <img src="@/assets/index/register.svg" class="image" alt="" />
+        <img src="@/assets/index/register.svg" class="image" alt=""/>
       </div>
     </div>
   </div>
@@ -217,6 +218,7 @@ export default {
     change() {
       this.signUpMode = !this.signUpMode
     },
+
     /* 登录校验 */
     loginForm(formName) {
       this.$refs[formName].validate((valid) => {
@@ -334,6 +336,7 @@ export default {
 .btn:hover {
   background-color: #4d84e2;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -459,6 +462,7 @@ export default {
     min-height: 800px;
     height: 100vh;
   }
+
   .signin-signup {
     width: 100%;
     top: 95%;
@@ -565,9 +569,11 @@ export default {
   .image {
     display: none;
   }
+
   .panel .content {
     padding: 0.5rem 1rem;
   }
+
   .container {
     padding: 1.5rem;
   }
@@ -624,11 +630,13 @@ form.sign-up-form {
 .submit-btn {
   width: 100%;
 }
+
 .tiparea {
   text-align: right;
   font-size: 12px;
   color: #333;
 }
+
 .tiparea p a {
   color: #409eff;
 }
