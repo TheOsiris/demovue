@@ -115,7 +115,7 @@ export default {
   name: "LoginRegister",
   data() {
     /* 判断两次密码是否一致 */
-    var validatePass2 = (rule, value, callback) => {
+    const validatePass2 = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("Please re-enter password"));
       } else if (value !== this.registerUser.password) {
@@ -127,8 +127,8 @@ export default {
     return {
       signUpMode: false,
       loginUser: {
-        username: "admin",
-        password: "123456",
+        username: "",
+        password: "",
       },
       registerUser: {
         username: "",
